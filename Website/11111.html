@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Команды</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            animation: fadeIn 1s ease;
+            color: #343a40;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 40px 20px; /* Добавлены отступы для мобильных */
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.5em; /* Уменьшен для мобильных устройств */
+        }
+        h2 {
+            margin: 0;
+            color: #007BFF;
+            font-size: 1.8em; /* Увеличен для лучшей читаемости */
+        }
+        section {
+            padding: 30px 10px; /* Добавлены отступы для мобильных */
+            margin: 20px;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px; /* Отступы между проектами */
+        }
+        .project {
+            border: 1px solid #eee;
+            padding: 15px;
+            flex: 1 1 calc(30% - 20px);
+            border-radius: 5px;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+        .project img {
+            width: 100%; /* Использовано 100% для адаптивности */
+            height: auto; /* Автоматическое изменение высоты */
+            object-fit: cover; /* Обрезка изображения */
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px -10px;
+        }
+        .team-member {
+            text-align: center;
+            width: 45%;
+            margin: 10px 0; /* Добавлены отступы для мобильных */
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Медиа-запросы для адаптивности */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .project {
+                flex: 1 1 calc(100% - 20px);
+            }
+            .team-member {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 20px 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            .projects {
+                flex-direction: column; /* Вертикальная компоновка для мобильных */
+                align-items: center; /* Центрирование проектов */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Команда "AEROIntegra"</h1>
+    <p>Интегрируем прошлое в настоящее для лучшего будущего</p>
+</header>
+
+<section id="about">
+    <h2>О нас</h2>
+    <p>Мы - команда школьников из Детского технопарка "Кванториум 33", создающие проекты беспилотных аппаратов для решения проблем различных масштабов, и в разных сферах нашего общества: от аэроглиссера-диверсанта для спецслужб, до дрона для автономного подсчета поголовья скота при помощи нейросети.</p>
+    <h3>Наша команда</h3>
+    <div class="team">
+        <div class="team-member">
+            <h4>Святослав</h4>
+            <img src="C:\Users\Komp\OneDrive\Рабочий стол\Website\333.jpg" alt="Участник 1">
+            <p>Программист-тестировщик (backend), второй пилот, спикер. </p>
+        </div>
+        <div class="team-member">
+            <h4>Максим</h4>
+            <img src="C:\Users\Komp\OneDrive\Рабочий стол\Website\444.jpg" alt="Участник 2">
+            <p>Инженер-конструктор, программист (frontend), капитан.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Проекты</h2>
+    <div class="projects">
+        <div class="project">
+            <h3><i class="fas fa-project-diagram icon"></i> Дрон с ESP-32 CAM</h3>
+            <img src="C:\Users\Komp\OneDrive\Рабочий стол\Website\6666.jpg" alt="Изображение проекта 1">
+            <p>Проект, сделанный на учебном квадрокоптере Геоскан Пионер Базовый, реализованный для подсчета поголовья скота автономно. Этап активной разработки.</p>
+            <a href="#">Смотреть проект</a>
+        </div>
+        <div class="project">
+            <h3><i class="fas fa-lightbulb icon"></i> Проект 2</h3>
+            <img src="C:\Users\Komp\OneDrive\Рабочий стол\Website\7777.jpg" alt="Изображение проекта 2">
+            <p>Проект аэролодки с контактным зарядом для поражения надводных объектов противника. Этап доработки.</p>
+            <a href="#">Смотреть проект</a>
+        </div>
+        <div class="project">
+            <h3><i class="fas fa-users icon"></i> Проект 3</h3>
+            <img src="C:\Users\Komp\OneDrive\Рабочий стол\Website\888.jpg" alt="Изображение проекта 3">
+            <p>Проект, сделанный на учебном квадрокоптере Геоскан Пионер Базовый, реализованный для доставки средств индивидуальной защиты дыхательных путей пострадавшим от различных чрезвычайных ситуаций. Этап доработки.</p>
+            <a href="#">Смотреть проект</a>
+        </div>
+    </div>
+</section>
+
+<section id="contacts">
+    <h2>Контакты</h2>
+    <p>Если у вас есть вопросы или вы хотите обсудить возможное сотрудничество, свяжитесь с нами:</p>
+    <ul>
+        <li><i class="fas fa-envelope icon"></i> Почта: <a href="mailto:maksimpodgornyj60@gmail.com">maksimpodgornyj60@gmail.com</a></li>
+        <li><i class="fas fa-phone icon"></i> Телефон: <a href="tel:+79004800574">+7 (900) 480-0574</a></li>
+        <li><i class="fas fa-map-marker-alt icon"></i> Адрес: Улица Каманина, 30/18, г. Владимир, Российская Федерация</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2024-2025 Команда "AEROIntegra". Все права защищены.</p>
+</footer>
+
+</body>
+</html>
+
+
+
