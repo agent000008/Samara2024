@@ -20,13 +20,22 @@
             to { opacity: 1; }
         }
         header {
-            background: #007BFF;
+            background-image: url(trtr.png);
             color: #fff;
             padding: 40px 20px; /* Добавлены отступы для мобильных */
             text-align: center;
+            display: flex; /* Добавлено для центрирования */
+            justify-content: center; /* Центрирование заголовка */
+        }
+        .head {
+            background-color: white;
+            color: #007BFF;
+            width: 500px;
+            padding: 20px;
+            border-radius: 20px;
         }
         h1 {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifs;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             margin: 0;
             font-size: 2.5em; /* Уменьшен для мобильных устройств */
         }
@@ -34,6 +43,13 @@
             margin: 0;
             color: #007BFF;
             font-size: 1.8em; /* Увеличен для лучшей читаемости */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h3 {
+            color: #024ea0;
+            margin-left: 10px;
+            text-align: center;
         }
         section {
             padding: 30px 10px; /* Добавлены отступы для мобильных */
@@ -51,6 +67,14 @@
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 20px; /* Отступы между проектами */
+        }
+        .info{
+            background-color: #036fe2;
+             color: white; 
+             padding: 27px;
+              font-size: 20px; 
+              text-align: center; 
+              border-radius: 10px;
         }
         .project {
             border: 1px solid #eee;
@@ -86,15 +110,25 @@
             margin-right: 8px;
         }
         .team {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: flex; /* Используем Flexbox для расположения участников */
+            flex-wrap: wrap; /* Позволяем переносить блоки на новую строку */
+            justify-content: center; /* Центрируем блоки */
             margin: 20px -10px;
         }
         .team-member {
             text-align: center;
-            width: 45%;
-            margin: 10px 0; /* Добавлены отступы для мобильных */
+            width: 20%;
+            margin: 20px; /* Убраны большие отступы для лучшей адаптивности */
+            padding-bottom: 50px;
+            color: white;
+            background-color: #0556ad;
+            border-radius: 20px;
+            font-size: 18px;
+            transition: transform 0.3s; /* Добавлена анимация */
+        
+        }
+        .team-member:hover {
+            transform: scale(1.05); /* Увеличение карточки при наведении */
         }
         .team-member img {
             border-radius: 50%;
@@ -114,7 +148,7 @@
                 flex: 1 1 calc(100% - 20px);
             }
             .team-member {
-                width: 100%;
+                width: 100%; /* Полная ширина на мобильных устройствах */
             }
         }
 
@@ -138,19 +172,21 @@
 <body>
 
 <header>
-    <h1>Команда "AEROIntegra"</h1>
-    <p>Интегрируем прошлое в настоящее для лучшего будущего</p>
+    <div class="head"><h1>Команда "AEROIntegra"</h1>
+        <p>Интегрируем прошлое в настоящее для лучшего будущего</p></div>
 </header>
 
 <section id="about">
     <h2>О нас</h2>
-    <p>Мы - команда школьников из Детского технопарка "Кванториум 33", создающие проекты беспилотных аппаратов для решения проблем различных масштабов, и в разных сферах нашего общества: от аэроглиссера-диверсанта для спецслужб, до дрона для автономного подсчета поголовья скота при помощи нейросети.</p>
+    <div class="info">
+        <p>Мы - команда школьников из Детского технопарка "Кванториум 33", создающие проекты беспилотных аппаратов для решения проблем различных масштабов, и в разных сферах нашего общества: от аэроглиссера-диверсанта для спецслужб, до дрона для автономного подсчета поголовья скота при помощи нейросети.</p>
+    </div>
     <h3>Наша команда</h3>
     <div class="team">
         <div class="team-member">
             <h4>Святослав</h4>
             <img src="333.jpg" alt="Участник 1">
-            <p>Программист-тестировщик (backend), второй пилот, спикер. </p>
+            <p>Программист-тестировщик (backend), второй пилот, спикер.</p>
         </div>
         <div class="team-member">
             <h4>Максим</h4>
@@ -170,13 +206,13 @@
             <a href="#">Смотреть проект</a>
         </div>
         <div class="project">
-            <h3><i class="fas fa-lightbulb icon"></i> Проект 2</h3>
+            <h3><i class="fas fa-lightbulb icon"></i> Аэроглиссер-диверсант</h3>
             <img src="7777.jpg" alt="Изображение проекта 2">
             <p>Проект аэролодки с контактным зарядом для поражения надводных объектов противника. Этап доработки.</p>
             <a href="#">Смотреть проект</a>
         </div>
         <div class="project">
-            <h3><i class="fas fa-users icon"></i> Проект 3</h3>
+            <h3><i class="fas fa-users icon"></i> Дрон-доставщик СИЗ-ДП</h3>
             <img src="888.jpg" alt="Изображение проекта 3">
             <p>Проект, сделанный на учебном квадрокоптере Геоскан Пионер Базовый, реализованный для доставки средств индивидуальной защиты дыхательных путей пострадавшим от различных чрезвычайных ситуаций. Этап доработки.</p>
             <a href="#">Смотреть проект</a>
